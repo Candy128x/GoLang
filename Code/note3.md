@@ -2,8 +2,8 @@
 
 ---
 ## Comments
-1 . "//" for Single line
-2 . "/*" 
+1. "//" for Single line
+2. "/*" 
 	for 
 	multiple
 	line
