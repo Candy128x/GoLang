@@ -26,8 +26,28 @@
 
 ---
 ## method() name declaration
-1. smallAlphbateFunc() to acceess with in single own file like private
+1. smallAlphbetFunc() to acceess with in single own file like private
 2. CapsFunc() to access globely or public
+
+
+---
+## use of %T 
+- The type of a variable can be printed using %T format specifier in Printf method.
+- Eg: 
+	a := 23
+	fmt.Printf("type of a is %T", a) //type a	
+
+## use of %d
+- Go has a package unsafe which has a Sizeof function which returns in bytes the size of the variable 
+	passed to it
+- Eg: 
+	a := 23
+	fmt.Printf("size of a is %d", unsafe.Sizeof(a)) // size of a	
+
+
+
+
+
 
 
 ---
