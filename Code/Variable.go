@@ -27,6 +27,31 @@ func main(){
 		infer the type of that variable from the initial value.
 	*/
 	
+	
+	var length, width, height int = 10, 20, 30 // Declaring multiple variables 
+	fmt.Println("Length is:", length, " Width is:", width, " Height is:", height)
+	
+	var lengthNew, widthNew, heightNew = 10, 20, 30 // "int" is ommited/dropped 
+	fmt.Println("New.. Length is:", lengthNew, " Width is:", widthNew, " Height is:", heightNew)
+
+	
+	// Declare variables belonging to different types in a single statement.
+	var (
+		subject = "Python"
+		percent	= 85.3
+		rank	= 1
+	)
+	fmt.Println("Hey.. In", subject, "subject i got", percent, "percent with", rank, "rank :)")
+	
+	
+	// Short hand declaration
+	fruit, price := "Apple", 62
+	fmt.Println("Furit:", fruit, "& Price:", price)
+	/*
+	Short hand syntax can only be used when at least one of the variables in the left side of := is 
+		newly declared.
+	*/
+
 }
 
 /* 
