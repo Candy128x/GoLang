@@ -3,7 +3,7 @@
 ---
 ## Comments
 1 . "//" for Single line
-2 .  "/*" 
+2 . "/*" 
 	for 
 	multiple
 	line
