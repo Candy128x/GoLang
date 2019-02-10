@@ -10,7 +10,7 @@
   "*/"
 
 ---
-## append vari in print statment
+## Append vari in print statment
 
 1. use '+' for string
 - Eg: var name = "Ashish"
@@ -20,3 +20,6 @@
 - It's automatically not append one space in prefix of variable
 - Eg: var ageTeen = 18
 	fmt.Println("Teen age:", ageTeen)
+	
+---
+Author: [Ashish </>](https://github.com/Candy128x).
