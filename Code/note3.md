@@ -22,4 +22,4 @@
 	fmt.Println("Teen age:", ageTeen)
 	
 ---
-Author: [Ashish </>](https://github.com/Candy128x).
+Author: [Ashish](https://github.com/Candy128x) </>
