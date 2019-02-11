@@ -43,6 +43,16 @@ func alphabets() {
 }
 
 
+/* Output: 
+ashishs@lp-0731:~/Downloads/storage/Go/GoLang/Code$ go run goroutines.go 
+Hello Go Developer.. :]
+Hello goRoutines..
+main() func..
+1 a 2 3 b 4 c 5 d e 
+ main terminated.. .
+*/
+
+
 /*
 why our Goroutine did not run. After the call to go hello() in line no. 11, the control returned 
 	immediately to the next line of code without waiting for the hello goroutine to finish and printed 

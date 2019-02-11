@@ -10,7 +10,6 @@ func main() {
     fmt.Println("Hello Go Developer.. :]")
 
 
-    fmt.Println("\n") // The End.. .
 }
 
 

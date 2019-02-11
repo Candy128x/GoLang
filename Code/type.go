@@ -72,6 +72,12 @@ func main() {
 	k := i + int(j)
 	fmt.Println("\n Value of k:", k)
 	// op: Value of k: 35
+
+	tenInt := 10
+	var tenFloat64 float64 = float64(tenInt)
+	fmt.Printf("type %T| ten: %f", tenFloat64, tenFloat64)
+	fmt.Printf("\n\n")
+	// op: type float64| ten: 10.000000
 	
 }
 

@@ -9,6 +9,9 @@ import (
 func main() {
     fmt.Println("Hello Go Developer.. :]")
 
+    a := 10
+    fmt.Printf("value of a:%d | type %T", a, a)
+    fmt.Println("\naddrs value", &a)
 
     fmt.Println("\n") // The End.. .
 }

@@ -27,6 +27,10 @@ func main(){
 		infer the type of that variable from the initial value.
 	*/
 	
+    // assign multiple val to multiple vari
+    var i, s = 2, "hi" // i = 2 & s = "hi"
+	fmt.Println(i, s)
+	// op: 2 hi
 	
 	var length, width, height int = 10, 20, 30 // Declaring multiple variables 
 	fmt.Println("Length is:", length, " Width is:", width, " Height is:", height)
@@ -52,6 +56,13 @@ func main(){
 		newly declared.
 	*/
 
+
+	pi := float32 (21)
+	fmt.Printf("value of pi: %f & type: %T", pi, pi)
+	fmt.Printf("\nvalue of pi: %.2f & type: %T", pi, pi)
+
+
+	fmt.Println("\n\n") // The End.. .
 }
 
 /* 
