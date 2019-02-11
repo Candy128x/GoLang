@@ -1,5 +1,8 @@
 //geometry.go
 
+// cp gemotry folder to go/src/pkg/
+// ubnt: cmd => ashishs@lp-0731:~/Downloads/storage/Go/GoLang/Code$ sudo cp -r geometry /usr/lib/go/src/pkg/
+
 package main
 
 import (
@@ -20,6 +23,12 @@ func main() {
 
 /* Output:
 E:\4-Data\GoLang\Concept\Code\geometry>go run geometry.go
+Geometrical shape properties
+area of rectangle 42.00
+diagonal of the rectangle 9.22
+
+//ubnt
+ashishs@lp-0731:/usr/local/go/src/geometry$ sudo go run geometry.go 
 Geometrical shape properties
 area of rectangle 42.00
 diagonal of the rectangle 9.22

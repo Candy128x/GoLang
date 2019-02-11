@@ -54,7 +54,12 @@ main() func..
 
 
 /*
-why our Goroutine did not run. After the call to go hello() in line no. 11, the control returned 
+=> What are Goroutines?
+-> Goroutines are functions or methods that run concurrently with other functions or methods. Goroutines 
+	can be thought of as light weight threads. The cost of creating a Goroutine is tiny when compared 
+	to a thread. Hence its common for Go applications to have thousands of Goroutines running concurrently.
+
+-> why our Goroutine did not run. After the call to go hello() in line no. 11, the control returned 
 	immediately to the next line of code without waiting for the hello goroutine to finish and printed 
 	main function. Then the main Goroutine terminated since there is no other code to execute and hence 
 	the hello Goroutine did not get a chance to run.
