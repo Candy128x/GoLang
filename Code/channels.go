@@ -118,6 +118,10 @@ func main() {
 	./channels.go:110: invalid operation: <-sendch (receive from send-only type chan<- int)
 	*/
 
+
+	
+
+
     fmt.Println("\n") // The End.. .
 }
 
