@@ -11,15 +11,14 @@ func write(ch chan int) {
 		ch <- i
 		fmt.Println("Successfully wrote:", i ,"to ch :)")
 	}
-
-	// close(ch)
+	close(ch)
 }
 
 
 func main() {
     fmt.Println("Hello Go Developer.. :]")
 
-    ch := make(chan int, 1)
+    ch := make(chan int, 2)
     go write(ch)
     time.Sleep(2 * time.Second)
 
@@ -35,8 +34,19 @@ func main() {
 
 
 /* Output:
-ashishs@lp-0731:~/Downloads/storage/Go/GoLang/Code$ go run Demo.go 
+ashishs@lp-0731:~/Downloads/storage/Go/GoLang/Code$ go run channelsBuffered2.go
 Hello Go Developer.. :]
+Successfully wrote: 0 to ch :)
+Successfully wrote: 1 to ch :)
+Read value: 0 from ch
+Successfully wrote: 2 to ch :)
+Read value: 1 from ch
+Successfully wrote: 3 to ch :)
+Read value: 2 from ch
+Successfully wrote: 4 to ch :)
+Read value: 3 from ch
+Read value: 4 from ch
+Length of ch: 0
 */
 
 
@@ -44,4 +54,6 @@ Hello Go Developer.. :]
 -> In this example of buffered channel in which the values to the channel are written in a concurrent 
 	Goroutine and read from the main Goroutine. This example will help us better understand when 
 	writes to a buffered channel block.
+
+@ref: https://golangbot.com/buffered-channels-worker-pools/
 */
