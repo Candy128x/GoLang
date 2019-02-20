@@ -59,7 +59,12 @@ func main() {
 
 
 /* Output:
+[error] if set -> length, width := -5.0, -9.0
 ashishs@lp-0731:~/Downloads/storage/Go/GoLang/Code/errorHandling$ go run errorCustom4.go 
 error: length -5.00 is less than zero
 error: width -9.00 is less than zero
+
+[correct] if set -> length, width := 5.0, 9.0
+ashishs@lp-0731:~/Downloads/storage/Go/GoLang/Code/errorHandling$ go run errorCustom4.go 
+area of rect 45
 */
