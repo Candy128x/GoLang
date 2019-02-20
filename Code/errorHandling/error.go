@@ -98,6 +98,17 @@ func main() {
 	*/
 
 
+	/* -> Ignore error */
+	// files5, _ := filepath.Glob("[") // Since we ignored the error..
+	// fmt.Println("Matched files=", files5)
+
+	/* Output:
+	ashishs@lp-0731:~/Downloads/storage/Go/GoLang/Code/errorHandling$ go run error.go 
+	Hello Go Developer.. :]
+	Matched files= []
+	*/
+
+
 	fmt.Println("\n") // The End.. .
 }
 
