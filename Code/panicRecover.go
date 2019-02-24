@@ -53,4 +53,6 @@ Returned normally from main() :)
 	inside a deferred function stops the panicking sequence by restoring normal execution and 
 	retrieves the error value passed to the call of panic. If recover is called outside the 
 	deferred function, it will not stop a panicking sequence.
+-> Recover works only when it is called from the same goroutine. It's not possible to recover 
+	from a panic that has happened in a different goroutine.
 */
