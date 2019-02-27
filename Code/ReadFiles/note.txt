@@ -1,0 +1,2 @@
+Go has concurrency feature &
+also channel feature :)
