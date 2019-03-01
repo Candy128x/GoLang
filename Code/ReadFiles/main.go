@@ -3,8 +3,11 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	_"io/ioutil"
 	"flag"
+	"os"
+	"log"
+	"bufio"
 	)
 
 
@@ -50,15 +53,15 @@ func main() {
 
 
 	/* -> 2. Passing the file path as a command line flag */
-	fptr := flag.String("fpath", "note.txt", "file path to read from")
-	flag.Parse()
-	fmt.Println("Value of fpath is =", *fptr)
-	data, err := ioutil.ReadFile(*fptr)
-    if err != nil {
-    	fmt.Println("File reading error!")
-    	return
-    }
-    fmt.Println("Content of file =", string(data))
+	// fptr := flag.String("fpath", "note.txt", "file path to read from") // ->  This function returns the address of the string variable that stores the value of the flag.
+	// flag.Parse()
+	// fmt.Println("Value of fpath is =", *fptr)
+	// data, err := ioutil.ReadFile(*fptr)
+ //    if err != nil {
+ //    	fmt.Println("File reading error!")
+ //    	return
+ //    }
+ //    fmt.Println("Content of file =", string(data))
 
 
 	/* Output:
@@ -80,6 +83,85 @@ func main() {
 	/* -> 3. Bundling the text file along with the binary */
 
 
+	/* -> Reading file in small chunks*/
+	// fptr := flag.String("fpath", "note.txt", "file path to read from")
+	// flag.Parse()
+
+	// f, err := os.Open(*fptr)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	// defer func() {
+	// 	if err = f.Close(); err != nil {
+	// 		log.Fatal(err)
+	// 	}
+	// }()
+
+	// r := bufio.NewReader(f)
+	// b := make([]byte, 3)
+
+	// for {
+	// 	_, err := r.Read(b)
+	// 	if err != nil {
+	// 		fmt.Println("Error Reading File :", err)
+	// 		break
+	// 	}
+	// 	fmt.Println(string(b))
+	// }
+
+	/* Output:
+	ashishs@lp-0731:~/Downloads/storage/Go/GoLang/Code/ReadFiles$ go run main.go 
+	Hello Go Developer.. :]
+	Go 
+	has
+	 co
+	ncu
+	rre
+	ncy
+	 fe
+	atu
+	re 
+	&
+	a
+	lso
+	 ch
+	ann
+	el 
+	fea
+	tur
+	e :
+	)
+	:
+	Error Reading File : EOF
+	*/
+
+
+	/* -> Rading a file line by line */
+	fptr := flag.String("fpath", "note.txt", "file path to read from")
+	flag.Parse()
+
+	f, err := os.Open(*fptr)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer func() {
+		if err = f.Close(); err != nil {
+			log.Fatal(err)
+		}
+	}()
+
+	s := bufio.NewScanner(f)
+	for s.Scan() {
+		fmt.Println(s.Text())
+	}
+	err = s.Err()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+
     fmt.Println("\n") // The End.. .
 }
 
@@ -87,7 +169,27 @@ func main() {
 /* Output:
 ashishs@lp-0731:~/Downloads/storage/Go/GoLang/Code/ReadFiles$ go run main.go 
 Hello Go Developer.. :]
-Value of fpath is = note.text
+Go 
+has
+ co
+ncu
+rre
+ncy
+ fe
+atu
+re 
+&
+a
+lso
+ ch
+ann
+el 
+fea
+tur
+e :
+)
+:
+Error Reading File : EOF
 */
 
 
@@ -108,4 +210,9 @@ Value of fpath is = note.text
 	1. Using absolute file path
 	2. Passing the file path as a command line flag
 	3. Bundling the text file along with the binary
+
+=> how the flag package works. 
+-> The flag package has a String function. This function accepts 3 arguments. The first is the name 
+	of the flag, second is the default value and the third is a short description of the flag.	
+-> flag.Parse() should be called before any flag is accessed by the program.
 */
